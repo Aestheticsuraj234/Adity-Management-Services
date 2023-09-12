@@ -40,7 +40,7 @@ export const SearchBar = () => {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="group w-full h-10 rounded-md px-2 py-2 border flex justify-center  items-center gap-x-6  hover:bg-zinc-700/10 dark:hover:bg-zinc-700/50 transition"
+        className="group w-full h-10 rounded-md px-10 py-2 border flex justify-center  items-center gap-x-6  hover:bg-zinc-700/10 dark:hover:bg-zinc-700/50 transition"
       >
      
         <p

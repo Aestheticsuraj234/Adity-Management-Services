@@ -9,25 +9,25 @@ import {
 
 const ContactDetails = [
     {
-        Icon: <MessageSquarePlus />,
+        Icon: <MessageSquarePlus  color='#666DD4'/>,
         Title: "Chat with us",
         description: "Speak to our friendly team",
         link: "chat.untitle.com"
     },
     {
-        Icon: <Paperclip />,
+        Icon: <Paperclip color='#666DD4' />,
         Title: "Mail us",
         description: "We are here to help",
         link: "sonujha@aditymanagement.com"
     },
     {
-        Icon: <MapPin />,
+        Icon: <MapPin color='#666DD4' />,
         Title: "Visit us",
         description: "Visit our office",
         link: "Plot No - 50, Amedkar city Pusta Road, sec-123"
     },
     {
-        Icon: <PhoneCall />,
+        Icon: <PhoneCall color='#666DD4' />,
         Title: "Call us",
         description: "Monday to Friday 10 a.m to 7 p.m",
         link: "+91-8750413041"
@@ -42,7 +42,7 @@ const ContactUs = () => {
 
             <div className="flex justify-between gap-4 mt-12">
                 {ContactDetails.map((item, index) => (
-                    <Card key={index} className='h-[16rem] w-[16rem] border rounded-md flex flex-col justify-between items-start'>
+                    <Card key={index} className='h-[16rem] w-[18rem] border rounded-md flex flex-col justify-between items-start'>
                         <CardHeader className='h-[3rem] w-[3rem] border px-4 rounded-md justify-center items-center'>
                             {item.Icon}
                         </CardHeader>

@@ -11,7 +11,7 @@ import Image from 'next/image'
 const Navbar = () => {
     return (
         <div className='md:border-b md:fixed top-0 
-        md:z-50 w-full  shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.1)] backdrop-blur
+        md:z-50 w-full  bg-white dark:bg-gray-900 dark:border-gray-800
 '>
             <div className='md:flex hidden h-16 items-center px-4'>
                 <div className='flex flex-row items-center space-x-2'>

@@ -3,7 +3,7 @@ import { Bot, Brain, CircleDollarSign, Infinity, Ruler, ShieldCheck } from "luci
 const WhyChooseUs = () => {
     return (
         <>
-        <h1 className='items-center justify-center flex text-center mt-9 font-extrabold md:text-4xl text-3xl  bg-clip-text text-transparent dark:bg-gradient-to-r text-[#666DD4] dark:from-indigo-300 dark:to-purple-400'>Why Choose Us ? </h1>
+        <h1 className='items-center justify-center flex text-center mt-9 font-extrabold md:text-4xl text-3xl  dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r text-[#666DD4] dark:from-indigo-300 dark:to-purple-400'>Why Choose Us ? </h1>
         <section className='bg-[#0f172a] flex w-[100%] border  flex-col p-4 mt-12 rounded-lg max-w-full mb-10 '>
 
             <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mt-6">
