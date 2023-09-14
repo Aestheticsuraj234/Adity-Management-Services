@@ -20,7 +20,7 @@ const HomeComponent = () => {
                     </a>
 
                 </div>
-                <div className="hidden  lg:mt-0 lg:col-span-5 lg:flex mt-10">
+                <div className=" lg:mt-0 lg:col-span-5 lg:flex mt-10">
                     <Image src="/images/Hero.svg" alt="hero" width={450} height={450} />
                 </div>
             </div>

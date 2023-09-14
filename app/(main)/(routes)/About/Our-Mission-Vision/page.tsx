@@ -9,7 +9,7 @@ const HomeComponent = () => {
   return (
     <section className="mt-10">
 
-      <div className="grid max-w-screen-xl   px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+      <div className="md:grid  flex flex-col-reverse max-w-screen-xl   px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
         <div className="mr-auto place-self-center lg:col-span-7">
           <h1 className="max-w-3xl  bg-[#666DD4] dark:bg-gradient-to-r dark:from-purple-200 dark:via-purple-400 dark:to-purple-800 bg-clip-text text-transparent mb-2 text-2xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-5xl ">Our Mission</h1>
           <p className="max-w-2xl  font-bold text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 ">At Adity Management Services Pvt Ltd, our mission is to safeguard lives and property by providing top-tier fire-rated solutions and comprehensive interior services</p>
@@ -17,14 +17,14 @@ const HomeComponent = () => {
 
 
         </div>
-        <div className="hidden  lg:mt-0 lg:col-span-5 lg:flex mt-10">
+        <div className="  lg:mt-0 lg:col-span-5 lg:flex md:mt-10 mb-10">
           <Image src="/images/mission.svg" alt="hero" width={450} height={450} />
         </div>
       </div>
       <hr/>
       
       <div className="grid max-w-screen-xl   px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-      <div className="hidden  lg:mt-0 lg:col-span-5 lg:flex mt-10">
+      <div className="  lg:mt-0 lg:col-span-5 lg:flex md:mt-10 mb-10">
           <Image src="/images/vision.svg" alt="hero" width={450} height={450} />
         </div>
         <div className="mr-auto place-self-center lg:col-span-7">

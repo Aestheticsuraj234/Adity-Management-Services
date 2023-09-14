@@ -5,56 +5,22 @@ import { useParams, usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils"
 import Image from "next/image";
-import { AtSign, Backpack, BrainCircuit, Code2, Home, ScrollText, ShieldCheck } from "lucide-react";
 
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { Building2, User2, ChevronDown, Code2, Rocket, Users, Home, HammerIcon, Contact } from "lucide-react";
 export function MobileNavigation({
     className,
     ...props
 }: React.HTMLAttributes<HTMLElement>) {
     const pathname = usePathname();
-   
 
-    const routes = [
-        {
-            href: `/`,
-            label: 'Home',
-            icon: <Home  />,
-            active: pathname === `/`,
-        },
 
-        {
-            href: `/blogs`,
-            label: 'Blogs',
-            icon: <ScrollText />,
-            active: pathname === `/blogs`,
-        },
-        {
-            href: `/Resources`,
-            label: 'Resources',
-            icon: <Backpack  />,
-            active: pathname === `/Resources`,
-        },
-        {
-            href: `/MockTests`,
-            label: 'Mock-Tests',
-            icon: <ShieldCheck />,
 
-            active: pathname === `/MockTests`,
-        },
-        {
-            href: `/MentorshipPrograms`,
-            label: 'Mentorship',
-            icon: <AtSign  />,
-            active: pathname === `/MentorshipPrograms`,
-        },
-        {
-            href: `/CodersYugAI`,
-            label: ' CodersYug\'s AI',
-            icon: <BrainCircuit  />,
-            active: pathname === `/CodersYugAI`,
-        },
-
-    ]
 
     return (
         <>
@@ -68,19 +34,67 @@ export function MobileNavigation({
                     <h1 className='text-xl font-bold text-zinc-800 dark:text-zinc-100 ' >  CODERSYUG</h1>
                 </div>
                 <div className="flex flex-1 flex-col space-y-10 mt-10 w-full ">
-                    {routes.map((route) => (
-                        <Link
-                            key={route.href}
-                            href={route.href}
-                            className={cn(
+                    <Link
+
+                        href={"/"}
+                        className={cn(
+                            'text-lg flex items-center  justify-start gap-5 font-bold transition-colors hover:text-primary',
+                            pathname === "/" ? 'text-black dark:text-white' : 'text-muted-foreground'
+                        )}
+
+                    >
+                        <Home />
+                        Home
+                    </Link>
+                    <Link
+
+                        href={"#"}
+                        className={cn(
+                            'text-lg flex items-center  justify-start gap-5 font-bold transition-colors hover:text-primary',
+                            pathname === "#" ? 'text-black dark:text-white' : 'text-muted-foreground'
+                        )}
+                    >
+                        <DropdownMenu >
+                            <DropdownMenuTrigger className={cn(
+
                                 'text-lg flex items-center  justify-start gap-5 font-bold transition-colors hover:text-primary',
-                                route.active ? 'text-black dark:text-white' : 'text-muted-foreground'
-                            )}
-                        >
-                            {route.icon}
-                            {route.label}
-                        </Link>
-                    ))}
+                                pathname === "#" ? 'text-black dark:text-white' : 'text-muted-foreground'
+
+                            )}>
+                                <User2 />
+                                About <ChevronDown size={18} /></DropdownMenuTrigger>
+                            <DropdownMenuContent className="flex flex-1 justify-center items-start  flex-col">
+
+                                <Link href={"/About/Company-Profile"}><DropdownMenuItem className="flex  w-full justify-center items-start gap-3"> <Building2 size={18} className="text-zinc-600" /> Company Profile</DropdownMenuItem></Link>
+                                <Link href={"/About/Our-Team"}><DropdownMenuItem className="flex w-full justify-center items-start gap-3"><Rocket size={18} className="text-zinc-600" /> Our Team</DropdownMenuItem></Link>
+                                <Link href={"/About/Our-Mission-Vision"}> <DropdownMenuItem className="flex  w-full justify-center items-start gap-3"><Users size={18} className="text-zinc-600" />  Our Mission & Vision</DropdownMenuItem></Link>
+
+                            </DropdownMenuContent>
+                        </DropdownMenu>
+
+                    </Link>
+                    <Link
+
+                        href={"/our-services"}
+                        className={cn(
+                            'text-lg flex items-center  justify-start gap-5 font-bold transition-colors hover:text-primary',
+                            pathname === "/our-services" ? 'text-black dark:text-white' : 'text-muted-foreground'
+                        )}
+                    >
+                        <HammerIcon />
+                        Our Services
+                    </Link>
+                    <Link
+
+                        href={"/contact-us"}
+                        className={cn(
+                            'text-lg flex items-center  justify-start gap-5 font-bold transition-colors hover:text-primary',
+                            pathname === "/contact-us" ? 'text-black dark:text-white' : 'text-muted-foreground'
+                        )}
+                    >
+                        <Contact />
+                        Contact Us
+                    </Link>
                 </div>
             </nav>
         </>

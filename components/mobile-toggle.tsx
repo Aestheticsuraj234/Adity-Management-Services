@@ -33,7 +33,7 @@ export const MobileToggle = () => {
                 <div className=' md:hidden ml-auto flex items-center space-x-4' >
                     <SearchBar />
 
-                    <ThemeToggle />
+                    {/* <ThemeToggle /> */}
                    
                 </div>
             </SheetHeader>

@@ -18,8 +18,8 @@ const OurTeam = () => {
         
         '>Meet the Team</h1>
       <ProfileCircle />
-    
-     
+
+
     </section>
   )
 }

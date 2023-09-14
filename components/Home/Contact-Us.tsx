@@ -40,9 +40,9 @@ const ContactUs = () => {
             <h1 className='items-center justify-center flex text-center mt-9 font-extrabold md:text-4xl text-3xl bg-clip-text text-transparent dark:bg-gradient-to-r text-[#666DD4] dark:from-indigo-300 dark:to-purple-400'>Contact our friendly team</h1>
             <h4 className='items-center justify-center uppercase flex text-center font-bold text-md text-[#ED2A7C] '>Let us know how we can help?</h4>
 
-            <div className="flex justify-between gap-4 mt-12">
+            <div className="flex flex-col   items-center md:flex-row justify-between gap-4 mt-12">
                 {ContactDetails.map((item, index) => (
-                    <Card key={index} className='h-[16rem] w-[18rem] border rounded-md flex flex-col justify-between items-start'>
+                    <Card key={index} className='h-[16rem] md:w-[18rem]  w-full flex-1 border rounded-md flex flex-col justify-between items-start'>
                         <CardHeader className='h-[3rem] w-[3rem] border px-4 rounded-md justify-center items-center'>
                             {item.Icon}
                         </CardHeader>

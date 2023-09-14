@@ -9,13 +9,12 @@ export default async function  Home() {
   
     return (
         <div className="mx-4 mt-4 ">
-          <HomeComponent/>
+          <HomeComponent/> 
           <WhoWeAre/>
           <OurDiverseServices/>
           <WhyChooseUs/>
           <JoinUs/>
           <ContactUs/>
-      
         </div>
     )
 }
