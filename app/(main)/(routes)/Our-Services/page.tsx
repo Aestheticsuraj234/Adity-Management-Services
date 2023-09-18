@@ -1,6 +1,8 @@
+"use client"
 import ImageGallery from "@/components/image-gallery";
 import Image from "next/image";
-
+import { motion } from 'framer-motion'
+import { fadeIn, textContainer, textVariant, textVariant2 } from '@/lib/utils';
 
 const ourservicesData = [
   {
@@ -52,7 +54,12 @@ const ourservicesData = [
 const OurServices = () => {
   return (
     <section className="bg-white dark:bg-gray-900 mt-10">
-      <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+      <motion.div 
+       variants={fadeIn('right', 'tween', 0.2, 1)}
+       initial="hidden"
+       whileInView="show"
+       viewport={{ once: false, amount: 0.25 }}
+      className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div className="max-w-screen-md mb-8 lg:mb-16">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-[#666DD4] dark:text-white">CAMC SERVICES & MAINTENANCE SERVICE.</h2>
         </div>
@@ -73,7 +80,7 @@ const OurServices = () => {
           ))}
         </div>
 
-      </div>
+      </motion.div>
       <ImageGallery/>
     </section>
   );

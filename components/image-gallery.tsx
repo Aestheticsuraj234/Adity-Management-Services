@@ -1,7 +1,8 @@
-// ImageGallery.js
+'use client'
 import React from 'react';
 import Image from 'next/image';
-
+import { motion } from 'framer-motion'
+import { fadeIn, slideIn, textContainer, textVariant, textVariant2 } from '@/lib/utils'
 const imageGalleryData = [
   {
     imageUrl: '/Doors/door1.jpeg',
@@ -74,9 +75,9 @@ const imageGalleryData = [
 const ImageGallery = () => {
   return (
     <section className="text-gray-600 body-font">
-      <div className="container px-5 py-24 mx-auto">
+      <motion.div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="sm:text-3xl text-2xl font-extrabold title-font mb-4 text-gray-900">
+          <h1    className="sm:text-3xl text-2xl font-extrabold title-font mb-4 text-[#666DD4]">
             Our Service Range
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
@@ -92,8 +93,7 @@ const ImageGallery = () => {
                   src={item.imageUrl}
                   layout="fill"
                   objectFit="cover"
-                  // height={500}
-                  // width={300}
+                  
 
 />
                 <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
@@ -109,7 +109,7 @@ const ImageGallery = () => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
