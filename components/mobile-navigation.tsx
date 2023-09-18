@@ -75,10 +75,10 @@ export function MobileNavigation({
                     </Link>
                     <Link
 
-                        href={"/our-services"}
+                        href={"/OurServices"}
                         className={cn(
                             'text-lg flex items-center  justify-start gap-5 font-bold transition-colors hover:text-primary',
-                            pathname === "/our-services" ? 'text-black dark:text-white' : 'text-muted-foreground'
+                            pathname === "/OurServices" ? 'text-black dark:text-white' : 'text-muted-foreground'
                         )}
                     >
                         <HammerIcon />
@@ -86,10 +86,10 @@ export function MobileNavigation({
                     </Link>
                     <Link
 
-                        href={"/contact-us"}
+                        href={"/ContactUs"}
                         className={cn(
                             'text-lg flex items-center  justify-start gap-5 font-bold transition-colors hover:text-primary',
-                            pathname === "/contact-us" ? 'text-black dark:text-white' : 'text-muted-foreground'
+                            pathname === "/ContactUs" ? 'text-black dark:text-white' : 'text-muted-foreground'
                         )}
                     >
                         <Contact />

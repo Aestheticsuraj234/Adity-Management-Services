@@ -64,20 +64,20 @@ export function MainNav({
       </Link>
       <Link
 
-        href={"/our-services"}
+        href={"/OurServices"}
         className={cn(
           'text-sm font-medium transition-colors hover:text-primary',
-          pathname === "/our-services" ? 'text-black dark:text-white' : 'text-muted-foreground'
+          pathname === "/OurServices" ? 'text-black dark:text-white' : 'text-muted-foreground'
         )}
       >
         Our Services
       </Link>
       <Link
 
-        href={"/contact-us"}
+        href={"/ContactUs"}
         className={cn(
           'text-sm font-medium transition-colors hover:text-primary',
-          pathname === "/contact-us" ? 'text-black dark:text-white' : 'text-muted-foreground'
+          pathname === "/ContactUs" ? 'text-black dark:text-white' : 'text-muted-foreground'
         )}
       >
         Contact Us
