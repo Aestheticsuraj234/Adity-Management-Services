@@ -27,7 +27,7 @@ const JoinUs = ({ animate }: any) => {
                 viewport={{ once: false, amount: 0.25 }}
                 className='font-semibold text-zinc-600 text-lg mt-4 mb-5 '
             >
-                Join us in a journey where <span className='text-[#4B55EB]'>safety and style harmonize</span>, and your spaces bloom with elegance. At Adity Management Services Pvt Ltd,<span className='text-[#4B55EB]'>we&apos;re your partners in protection and perfection, specializing in supplying, installing, and maintaining fire-rated doors</span>, glass, partitions, wooden doors, flush doors, hardware, and more. Your vision, our expertise – let's create perfection together.
+                Join us in a journey where <span className='text-[#4B55EB]'>safety and style harmonize</span>, and your spaces bloom with elegance. At Adity Management Services Pvt Ltd,<span className='text-[#4B55EB]'>where your partners in protection and perfection, specializing in supplying, installing, and maintaining fire-rated doors</span>, glass, partitions, wooden doors, flush doors, hardware, and more. Your vision, our expertise – lets create perfection together.
             </motion.p>
             <motion.div
                 initial={{ scale: 0.8 }}

@@ -47,7 +47,7 @@ const CompanyProfile = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
-            className="max-w-2xl font-normal text-gray-500 lg:mb-8 md:text-lg lg:text-base dark:text-gray-400 ">Join us in creating safe and elegant spaces. Adity Management Services Pvt Ltd - where safety meets style, and where perfection is our promise."</motion.p>
+            className="max-w-2xl font-normal text-gray-500 lg:mb-8 md:text-lg lg:text-base dark:text-gray-400 ">Join us in creating safe and elegant spaces. Adity Management Services Pvt Ltd - where safety meets style, and where perfection is our promise.</motion.p>
         </motion.div>
         <motion.div variants={fadeIn('left', 'ease', 0.2, 1)}
           initial="hidden"
