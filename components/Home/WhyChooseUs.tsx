@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import {
   Bot,
@@ -7,6 +8,8 @@ import {
   Ruler,
   ShieldCheck,
 } from "lucide-react";
+import { motion } from 'framer-motion'
+import {  fadeIn, slideIn, textVariant} from '@/lib/utils';
 
 const cardData = [
   {
@@ -36,25 +39,43 @@ const cardData = [
   },
 ];
 
-const WhyChooseUs = () => {
+const WhyChooseUs = ({animate}:any) => {
   return (
     <>
-      <h1 className='items-center justify-center flex text-center mt-9 font-extrabold md:text-4xl text-3xl  dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r text-[#666DD4] dark:from-indigo-300 dark:to-purple-400'>Why Choose Us ? </h1>
-      <section className='bg-[#0f172a] flex w-[100%] border  flex-col p-4 mt-12 rounded-lg max-w-full mb-10 '>
+      <motion.h1
+        className="items-center justify-center flex text-center mt-9 font-extrabold md:text-4xl text-3xl dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r text-[#666DD4] dark:from-indigo-300 dark:to-purple-400"
+        variants={textVariant(0.5)}
+      >
+        Why Choose Us ?
+      </motion.h1>
+      <motion.section
+        className="bg-[#0f172a] flex w-[100%] border flex-col p-4 mt-12 rounded-lg max-w-full mb-10"
+        variants={fadeIn('up', 'tween', 0.2, 1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mt-6">
           {cardData.map((card, index) => (
-            <div key={index} className="p-4 rounded-lg ">
-              <h3 className="text-xl  font-bold flex flex-row justify-start text-white  items-center text-left gap-3">
+            <motion.div
+              key={index}
+              className="p-4 rounded-lg"
+              variants={fadeIn('right', 'tween', 0.2, 1)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.25 }}
+            >
+              <h3 className="text-xl font-bold flex flex-row justify-start text-white items-center text-left gap-3">
                 {card.icon}
                 {card.title}
               </h3>
-              <p className="md:text-base text-sm text-white font-medium  md:font-semibold flex justify-start px-11 items-center">
+              <p className="md:text-base text-sm text-white font-medium md:font-semibold flex justify-start px-11 items-center">
                 {card.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };

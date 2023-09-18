@@ -1,16 +1,34 @@
+// ProgressDemo.js
 "use client"
-
-import * as React from "react"
-
-import { Progress } from "@/components/ui/progress"
+// ProgressDemo.js
+import React, { useEffect, useState } from "react";
+import { Progress } from "@/components/ui/progress";
+import { usePathname } from "next/navigation";
 
 export default function ProgressDemo() {
-  const [progress, setProgress] = React.useState(13)
+    const [progress, setProgress] = useState(0);
+    const path = usePathname();
+    const [isProgressBarVisible, setProgressBarVisible] = useState(false);
 
-  React.useEffect(() => {
-    const timer = setTimeout(() => setProgress(66), 500)
-    return () => clearTimeout(timer)
-  }, [])
+    useEffect(() => {
+        // Show the progress bar
+        setProgressBarVisible(true);
 
-  return <Progress value={progress} className="w-full z-50 absolute top-0" />
+        // Start a timer to complete the progress and hide the progress bar
+        const timer = setTimeout(() => {
+            setProgress(10);
+            setProgress(100);
+            setProgressBarVisible(false);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, [path]);
+
+    return (
+        <>
+            {isProgressBarVisible && (
+                <Progress value={progress} className="w-full z-50 absolute top-0" />
+            )}
+        </>
+    );
 }

@@ -1,10 +1,10 @@
-import { profileEnd } from 'console';
+"use client"
 import { Instagram, Linkedin, Twitch, Twitter } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { InvalidatedProjectKind } from 'typescript';
-
+import { motion } from 'framer-motion'
+import { fadeIn, slideIn, textContainer, textVariant, textVariant2 } from '@/lib/utils';
 interface ProfileIntefaceprops {
   id: number;
   name: string;
@@ -72,10 +72,20 @@ const profileData = [
 const ProfileCircle = () => {
   return (
     profileData.map((profile: ProfileIntefaceprops) => (
-      <div key={profile.id} className='flex flex-col items-center justify-center space-y-2'>
+      <motion.div 
+      variants={fadeIn('right', 'tween', 0.2, 1)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      key={profile.id} className='flex flex-col items-center justify-center space-y-2'>
 
         <>
-          <div className='
+          <motion.div 
+              variants={slideIn('up', 'ease-in-out', 0.2, 1)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.25 }}
+          className='
     w-32 h-32
     rounded-full
     overflow-hidden
@@ -94,7 +104,7 @@ const ProfileCircle = () => {
               height={120}
               className='rounded-full'
             />
-          </div>
+          </motion.div>
           <h1 className='text-2xl font-bold text-zinc-800'>{profile.name}</h1>
           <h2 className='text-lg font-semibold text-zinc-600'>{profile.position}</h2>
           <span className='flex flex-row justify-center items-center gap-3'>
@@ -105,7 +115,7 @@ const ProfileCircle = () => {
           </span>
         </>
 
-      </div>
+      </motion.div>
     ))
 
 

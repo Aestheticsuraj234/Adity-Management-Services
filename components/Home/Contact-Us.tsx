@@ -1,3 +1,4 @@
+'use client';
 import { MapPin, MessageSquarePlus, Paperclip, PhoneCall } from 'lucide-react';
 import React from 'react';
 import {
@@ -6,10 +7,13 @@ import {
     CardFooter,
     CardHeader,
 } from "@/components/ui/card";
+import { motion } from 'framer-motion';
+import { fadeIn, slideIn, textVariant, zoomIn } from '@/lib/utils';
+
 
 const ContactDetails = [
     {
-        Icon: <MessageSquarePlus  color='#666DD4'/>,
+        Icon: <MessageSquarePlus color='#666DD4' />,
         Title: "Chat with us",
         description: "Speak to our friendly team",
         link: "chat.untitle.com"
@@ -34,13 +38,39 @@ const ContactDetails = [
     },
 ];
 
-const ContactUs = () => {
+const ContactUs = ({ animate }: any) => {
     return (
-        <section className='flex flex-col space-y-5 px-4 py-10 mt-5 mb-5 '>
-            <h1 className='items-center justify-center flex text-center mt-9 font-extrabold md:text-4xl text-3xl bg-clip-text text-transparent dark:bg-gradient-to-r text-[#666DD4] dark:from-indigo-300 dark:to-purple-400'>Contact our friendly team</h1>
-            <h4 className='items-center justify-center uppercase flex text-center font-bold text-md text-[#ED2A7C] '>Let us know how we can help?</h4>
+        <motion.section
+            className='flex flex-col space-y-5 px-4 py-10 mt-5 mb-5'
+            variants={fadeIn('up', 'tween', 0.2, 1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.25 }}
+        >
+            <motion.h1
+                className='items-center justify-center flex text-center mt-9 font-extrabold md:text-4xl text-3xl bg-clip-text text-transparent dark:bg-gradient-to-r text-[#666DD4] dark:from-indigo-300 dark:to-purple-400'
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+            >
+                Contact our friendly team
+            </motion.h1>
+            <motion.h4
+                className='items-center justify-center uppercase flex text-center font-bold text-md text-[#ED2A7C]'
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+            >
+                Let us know how we can help?
+            </motion.h4>
 
-            <div className="flex flex-col   items-center md:flex-row justify-between gap-4 mt-12">
+            <motion.div
+                className="flex flex-col items-center md:flex-row justify-between gap-4 mt-12"
+                variants={fadeIn('down', 'tween', 0.2, 1)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.25 }}
+            >
                 {ContactDetails.map((item, index) => (
                     <Card key={index} className='h-[16rem] md:w-[18rem]  w-full flex-1 border rounded-md flex flex-col justify-between items-start'>
                         <CardHeader className='h-[3rem] w-[3rem] border px-4 rounded-md justify-center items-center'>
@@ -57,8 +87,8 @@ const ContactUs = () => {
                         </div>
                     </Card>
                 ))}
-            </div>
-        </section>
+            </motion.div>
+        </motion.section>
     );
 }
 

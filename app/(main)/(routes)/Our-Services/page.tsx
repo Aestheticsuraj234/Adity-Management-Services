@@ -1,3 +1,4 @@
+import ImageGallery from "@/components/image-gallery";
 import Image from "next/image";
 
 
@@ -71,7 +72,9 @@ const OurServices = () => {
             </div>
           ))}
         </div>
+
       </div>
+      <ImageGallery/>
     </section>
   );
 }
