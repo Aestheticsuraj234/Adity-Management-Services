@@ -2,7 +2,7 @@
 import ImageGallery from "@/components/image-gallery";
 import Image from "next/image";
 import { motion } from 'framer-motion'
-import { fadeIn, textContainer, textVariant, textVariant2 } from '@/lib/utils';
+import { fadeIn} from '@/lib/utils';
 
 const ourservicesData = [
   {
@@ -61,7 +61,7 @@ const OurServices = () => {
        viewport={{ once: false, amount: 0.25 }}
       className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div className="max-w-screen-md mb-8 lg:mb-16">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-[#666DD4] dark:text-white">CAMC SERVICES & MAINTENANCE SERVICE.</h2>
+          <h2 className="mb-4 md:text-4xl text-2xl tracking-tight text-center font-extrabold text-[#666DD4] dark:text-white">CAMC SERVICES & MAINTENANCE SERVICE.</h2>
         </div>
         <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
           {ourservicesData.map((service) => (
@@ -74,8 +74,8 @@ const OurServices = () => {
                   height={141}
                 />
               </div>
-              <h3 className="mb-2 text-xl font-bold dark:text-white">{service.title}</h3>
-              <p className="text-gray-500 dark:text-gray-400">{service.description}</p>
+              <h3 className="mb-2 md:text-xl text-lg font-bold dark:text-white">{service.title}</h3>
+              <p className="text-gray-500  dark:text-gray-400">{service.description}</p>
             </div>
           ))}
         </div>

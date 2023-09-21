@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link"
-import { useParams, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils"
-import Image from "next/image";
+
 
 import {
     DropdownMenu,
@@ -63,7 +63,7 @@ export function MobileNavigation({
                             )}>
                                 <User2 />
                                 About <ChevronDown size={18} /></DropdownMenuTrigger>
-                            <DropdownMenuContent className="flex flex-1 justify-center items-start  flex-col">
+                            <DropdownMenuContent side="left" className="flex flex-1 justify-center items-start  flex-col">
 
                                 <Link href={"/About/Company-Profile"}><DropdownMenuItem className="flex  w-full justify-center items-start gap-3"> <Building2 size={18} className="text-zinc-600" /> Company Profile</DropdownMenuItem></Link>
                                 <Link href={"/About/Our-Team"}><DropdownMenuItem className="flex w-full justify-center items-start gap-3"><Rocket size={18} className="text-zinc-600" /> Our Team</DropdownMenuItem></Link>

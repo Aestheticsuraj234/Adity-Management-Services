@@ -77,12 +77,12 @@ const ContactUs = () => {
   }
 
   return (
-    <section className='flex flex-col justify-around items-center w-full mt-20 mx-4 '>
-      <div className='h-screen border  md:w-[70rem] w-screen flex-1  flex flex-row items-center justify-between mb-10  shadow-md rounded-md'>
+    <section className='flex flex-col justify-around items-center w-full mt-20 '>
+      <div className='h-screen border  md:w-[70rem] w-[90%] flex-1  flex flex-row items-center justify-between mb-10  shadow-md rounded-md'>
         {/* Section-1 for contact form */}
         <div className='h-full w-[50rem] flex flex-col md:justify-start  md:items-start justify-center items-center px-10 py-10'>
-          <h1 className='text-4xl font-bold text-[#666DD4]'>Get  in Touch</h1>
-          <p className='text-[#898989] font-bold text-lg mt-4 mb-4'>We are here for you! How Can help?.</p>
+          <h1 className='md:text-4xl text-xl font-bold text-[#666DD4]'>Get  in Touch</h1>
+          <p className='text-[#898989] font-bold md:text-lg text-sm mt-4 mb-4'>We are here for you! How Can help?.</p>
 
           <Form {...form} >
             <form onSubmit={form.handleSubmit(onSubmit)} className="md:w-3/4 w-full space-y-6 mb-10">
