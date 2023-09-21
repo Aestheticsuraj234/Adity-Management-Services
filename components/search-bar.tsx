@@ -68,11 +68,11 @@ export const SearchBar = () => {
     <>
       <div
         onClick={() => setOpen(true)}
-        className="group w-64 h-10 rounded-md px-4 py-1 border flex flex-row justify-between items-center hover:bg-zinc-700/10 dark:hover:bg-zinc-700/50 transition"
+        className="group w-64 h-10 rounded-md px-4 py-1 border flex flex-row justify-between items-center hover:bg-zinc-700/10 transition"
         // Adjust the height and padding values as needed
       >
         <p
-          className="font-semibold text-sm text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition"
+          className="font-semibold text-sm text-zinc-500 group-hover:text-zinc-600 transition"
         >
           Search
         </p>

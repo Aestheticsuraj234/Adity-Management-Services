@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion'
-import { fadeIn, slideIn, textContainer, textVariant, textVariant2 } from '@/lib/utils';
+import { fadeIn, slideIn } from '@/lib/utils';
 interface ProfileIntefaceprops {
   id: number;
   name: string;

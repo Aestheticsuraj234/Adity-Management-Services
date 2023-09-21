@@ -17,23 +17,23 @@ const HomeComponent = ({ animate }: any) => {
       >
         <div className="mr-auto place-self-center lg:col-span-7">
           <motion.h1
-            className="max-w-3xl bg-[#666DD4] dark:bg-gradient-to-r dark:from-purple-200 dark:via-purple-400 dark:to-purple-800 bg-clip-text text-transparent mb-2 text-2xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-5xl"
+            className="max-w-3xl bg-[#666DD4]   bg-clip-text text-transparent mb-2 text-2xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-5xl"
           >
             WELCOME TO ADITY MANAGEMENT SERVICES.
           </motion.h1>
           <motion.p
-            className="max-w-2xl font-bold text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
+            className="max-w-2xl font-bold text-gray-500 lg:mb-8 md:text-lg lg:text-xl "
           >
             Your Trusted Partner for Comprehensive Fire-Rated Solutions , Style, and More
           </motion.p>
           <motion.p
-            className="max-w-2xl mb-6 font-medium text-gray-500 lg:mb-8 md:text-base lg:text-lg dark:text-gray-400"
+            className="max-w-2xl mb-6 font-medium text-gray-500 lg:mb-8 md:text-base lg:text-lg "
           >
             Welcome to Adity Management Services Pvt Ltd, your trusted source for all things fire-rated. With a strong commitment to safety and quality, we&apos;ve been aiming to be a leader in the industry since day one.
           </motion.p>
           <motion.a
             href="#"
-            className="inline-flex items-center justify-center px-5 py-3 mr-3 text-lg text-center text-white rounded-lg font-bold bg-[#666DD4] dark:bg-gradient-to-r dark:from-indigo-300 dark:to-purple-400 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+            className="inline-flex items-center justify-center px-5 py-3 mr-3 text-lg text-center text-white rounded-lg font-bold bg-[#666DD4]  focus:ring-4 focus:ring-primary-300 "
             whileHover={{ scale: 1.05 }} // Animation on hover
           >
             Let&apos;s Connect✨

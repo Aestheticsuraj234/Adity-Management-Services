@@ -32,7 +32,7 @@ export function MainNav({
         href={"/"}
         className={cn(
           'text-sm font-medium transition-colors hover:text-primary',
-          pathname === "/" ? 'text-black dark:text-white' : 'text-muted-foreground'
+          pathname === "/" ? 'text-black ' : 'text-muted-foreground'
         )}
       >
         Home
@@ -42,14 +42,14 @@ export function MainNav({
         href={"#"}
         className={cn(
           'text-sm font-medium transition-colors hover:text-primary',
-          pathname === "#" ? 'text-black dark:text-white' : 'text-muted-foreground'
+          pathname === "#" ? 'text-black ' : 'text-muted-foreground'
         )}
       >
         <DropdownMenu>
           <DropdownMenuTrigger className={cn(
 
             'text-sm font-medium flex-row flex items-center justify-center gap-1 transition-colors outline-none hover:text-primary',
-            pathname === "#" ? 'text-black dark:text-white' : 'text-muted-foreground'
+            pathname === "#" ? 'text-black ' : 'text-muted-foreground'
 
           )}>About <ChevronDown size={18} /></DropdownMenuTrigger>
           <DropdownMenuContent className="flex flex-1 justify-center items-start  flex-col">
@@ -67,7 +67,7 @@ export function MainNav({
         href={"/OurServices"}
         className={cn(
           'text-sm font-medium transition-colors hover:text-primary',
-          pathname === "/OurServices" ? 'text-black dark:text-white' : 'text-muted-foreground'
+          pathname === "/OurServices" ? 'text-black ' : 'text-muted-foreground'
         )}
       >
         Our Services
@@ -77,7 +77,7 @@ export function MainNav({
         href={"/ContactUs"}
         className={cn(
           'text-sm font-medium transition-colors hover:text-primary',
-          pathname === "/ContactUs" ? 'text-black dark:text-white' : 'text-muted-foreground'
+          pathname === "/ContactUs" ? 'text-black' : 'text-muted-foreground'
         )}
       >
         Contact Us

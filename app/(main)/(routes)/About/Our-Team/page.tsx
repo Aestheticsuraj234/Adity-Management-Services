@@ -22,7 +22,7 @@ const OurTeam = () => {
         text-4xl
         font-bold
         text-[#666DD4]
-        dark:text-zinc-100
+       
         mb-10
 
         

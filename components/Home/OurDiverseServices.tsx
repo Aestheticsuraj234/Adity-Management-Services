@@ -58,7 +58,7 @@ const OurDiverseServices = ({animte}:any) => {
                 We provide a range of services to elevate your spaces.
             </motion.h4>
             <motion.h1
-                className='items-center justify-center flex text-center mt-9 font-extrabold md:text-4xl text-3xl  text-[#666DD4] dark:from-indigo-300 dark:to-purple-400'
+                className='items-center justify-center flex text-center mt-9 font-extrabold md:text-4xl text-3xl  text-[#666DD4]  '
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -75,11 +75,11 @@ const OurDiverseServices = ({animte}:any) => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: item.id * 0.2 }}
                     >
-                        <h3 className="text-xl font-bold flex flex-row justify-start text-zinc-600 dark:bg-gradient-to-r dark:from-indigo-300 dark:to-purple-400 items-center dark:bg-clip-text dark:text-transparent md:text-left gap-3">
+                        <h3 className="text-xl font-bold flex flex-row justify-start text-zinc-600 items-center   md:text-left gap-3">
                             {item.icon}
                             {item.title}
                         </h3>
-                        <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+                        <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl ">
                             {item.description}
                         </p>
                     </motion.div>

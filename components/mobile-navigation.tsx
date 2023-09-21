@@ -30,8 +30,8 @@ export function MobileNavigation({
                 {...props}
             >
                 <div className='flex flex-row items-center space-x-2 '>
-                    <Code2 className='text-zinc-800 dark:text-zinc-100' />
-                    <h1 className='text-xl font-bold text-zinc-800 dark:text-zinc-100 ' >  CODERSYUG</h1>
+                    <Code2 className='text-zinc-800' />
+                    <h1 className='text-xl font-bold text-zinc-800  ' >  CODERSYUG</h1>
                 </div>
                 <div className="flex flex-1 flex-col space-y-10 mt-10 w-full ">
                     <Link
@@ -39,7 +39,7 @@ export function MobileNavigation({
                         href={"/"}
                         className={cn(
                             'text-lg flex items-center  justify-start gap-5 font-bold transition-colors hover:text-primary',
-                            pathname === "/" ? 'text-black dark:text-white' : 'text-muted-foreground'
+                            pathname === "/" ? 'text-black ' : 'text-muted-foreground'
                         )}
 
                     >
@@ -51,14 +51,14 @@ export function MobileNavigation({
                         href={"#"}
                         className={cn(
                             'text-lg flex items-center  justify-start gap-5 font-bold transition-colors hover:text-primary',
-                            pathname === "#" ? 'text-black dark:text-white' : 'text-muted-foreground'
+                            pathname === "#" ? 'text-black ' : 'text-muted-foreground'
                         )}
                     >
                         <DropdownMenu >
                             <DropdownMenuTrigger className={cn(
 
                                 'text-lg flex items-center  justify-start gap-5 font-bold transition-colors hover:text-primary',
-                                pathname === "#" ? 'text-black dark:text-white' : 'text-muted-foreground'
+                                pathname === "#" ? 'text-black ' : 'text-muted-foreground'
 
                             )}>
                                 <User2 />
@@ -78,7 +78,7 @@ export function MobileNavigation({
                         href={"/OurServices"}
                         className={cn(
                             'text-lg flex items-center  justify-start gap-5 font-bold transition-colors hover:text-primary',
-                            pathname === "/OurServices" ? 'text-black dark:text-white' : 'text-muted-foreground'
+                            pathname === "/OurServices" ? 'text-black ' : 'text-muted-foreground'
                         )}
                     >
                         <HammerIcon />
@@ -89,7 +89,7 @@ export function MobileNavigation({
                         href={"/ContactUs"}
                         className={cn(
                             'text-lg flex items-center  justify-start gap-5 font-bold transition-colors hover:text-primary',
-                            pathname === "/ContactUs" ? 'text-black dark:text-white' : 'text-muted-foreground'
+                            pathname === "/ContactUs" ? 'text-black ' : 'text-muted-foreground'
                         )}
                     >
                         <Contact />

@@ -48,7 +48,7 @@ const ContactUs = ({ animate }: any) => {
             viewport={{ once: false, amount: 0.25 }}
         >
             <motion.h1
-                className='items-center justify-center flex text-center mt-9 font-extrabold md:text-4xl text-3xl bg-clip-text text-transparent dark:bg-gradient-to-r text-[#666DD4] dark:from-indigo-300 dark:to-purple-400'
+                className='items-center justify-center flex text-center mt-9 font-extrabold md:text-4xl text-3xl bg-clip-text text-transparent  text-[#666DD4] '
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}

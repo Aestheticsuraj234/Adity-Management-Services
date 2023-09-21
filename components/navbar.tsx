@@ -12,7 +12,7 @@ import Link from 'next/link'
 const Navbar = () => {
     return (
         <div className='md:border-b md:fixed top-0 
-        md:z-50 w-full  bg-white dark:bg-gray-900 dark:border-gray-800
+        md:z-50 w-full  bg-white 
 '>
             <div className='md:flex hidden h-16 items-center px-4'>
                 <Link href={"/"} className='flex flex-row items-center space-x-2'>
