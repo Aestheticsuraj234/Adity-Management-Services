@@ -13,6 +13,7 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Building2, User2, ChevronDown, Code2, Rocket, Users, Home, HammerIcon, Contact } from "lucide-react";
+import Image from "next/image";
 export function MobileNavigation({
     className,
     ...props
@@ -30,8 +31,13 @@ export function MobileNavigation({
                 {...props}
             >
                 <div className='flex flex-row items-center space-x-2 '>
-                    <Code2 className='text-zinc-800' />
-                    <h1 className='text-xl font-bold text-zinc-800  ' >  CODERSYUG</h1>
+                <Image
+                        src={"/images/logo.svg"}
+                        alt="Adity-Management-Services-Logo"
+                        width={200}
+                        height={30}
+                        priority={true}
+                    />
                 </div>
                 <div className="flex flex-1 flex-col space-y-10 mt-10 w-full ">
                     <Link
