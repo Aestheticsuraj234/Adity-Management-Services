@@ -35,13 +35,8 @@ const CompanyProfile = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
-            className="max-w-2xl font-normal text-gray-500 lg:mb-8 md:text-lg lg:text-base  ">Located in [Your Location], our team works tirelessly to ensure your spaces are not only secure but also visually appealing. With a strong foundation and state-of-the-art facilities, we have the capability to meet and exceed your expectations, catering to all safety standards and efficacy.</motion.p>
-          <motion.p
-            variants={textVariant2}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.25 }}
-            className="max-w-2xl font-normal text-gray-500 lg:mb-8 md:text-lg lg:text-base  ">Our expertise extends globally, with a reputation for excellence and successful international projects. A dedicated team of professionals and engineers has helped us build a strong distribution network for fire doors and a customer base in various countries.</motion.p>
+            className="max-w-2xl font-normal text-gray-500 lg:mb-8 md:text-lg lg:text-base  ">Located in Noida , our team works tirelessly to ensure your spaces are not only secure but also visually appealing. With a strong foundation and state-of-the-art facilities, we have the capability to meet and exceed your expectations, catering to all safety standards and efficacy.</motion.p>
+        
           <motion.p
             variants={textVariant2}
             initial="hidden"
