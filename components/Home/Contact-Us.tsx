@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { motion } from 'framer-motion';
 import { fadeIn, slideIn, textVariant, zoomIn } from '@/lib/utils';
+import Link from 'next/link';
 
 
 const ContactDetails = [
@@ -16,25 +17,25 @@ const ContactDetails = [
         Icon: <MessageSquarePlus color='#666DD4' />,
         Title: "Chat with us",
         description: "Speak to our friendly team",
-        link: "chat.untitle.com"
+        link: "chat.whatsApp.com"
     },
     {
         Icon: <Paperclip color='#666DD4' />,
         Title: "Mail us",
         description: "We are here to help",
-        link: "sonujha@aditymanagement.com"
+        link: "enquiry@aditymanagement.com"
     },
     {
         Icon: <MapPin color='#666DD4' />,
         Title: "Visit us",
         description: "Visit our office",
-        link: "Plot No - 50, Amedkar city Pusta Road, sec-123"
+        link: "Corporate office: Gaur City Mall, 7th Floor, Office No-724, Greater Noida UP-201009"
     },
     {
         Icon: <PhoneCall color='#666DD4' />,
         Title: "Call us",
         description: "Monday to Friday 10 a.m to 7 p.m",
-        link: "+91-8750413041"
+        link: "+91-8750413041 , 011-69269035"
     },
 ];
 
@@ -72,7 +73,7 @@ const ContactUs = ({ animate }: any) => {
                 viewport={{ once: false, amount: 0.25 }}
             >
                 {ContactDetails.map((item, index) => (
-                    <Card key={index} className='h-[16rem] md:w-[18rem]  w-full flex-1 border rounded-md flex flex-col justify-between items-start'>
+                    <Card key={index} className='h-[16rem] md:w-[18rem]  w-full flex-1 border rounded-md flex flex-col justify-between items-start '>
                         <CardHeader className='h-[3rem] w-[3rem] border px-4 rounded-md justify-center items-center'>
                             {item.Icon}
                         </CardHeader>
@@ -82,7 +83,7 @@ const ContactUs = ({ animate }: any) => {
                                 <span className='text-sm font-medium text-zinc-600'>{item.description}</span>
                             </CardContent>
                             <CardFooter>
-                                <p className='text-base text-zinc-900 '>{item.link}</p>
+                                <Link href="https://wa.me/+918287429936" target='_blank' className='text-base text-zinc-900 '>{item.link}</Link>
                             </CardFooter>
                         </div>
                     </Card>

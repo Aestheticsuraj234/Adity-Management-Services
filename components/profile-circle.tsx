@@ -19,9 +19,9 @@ interface ProfileIntefaceprops {
 const profileData = [
   {
     id: 1,
-    name: 'John Doe',
-    position: 'CEO',
-    image: '/images/profilepi.svg',
+    name: 'Abhinandan Jha',
+    position: 'Product Manager',
+    image: '/Profile3.jpeg',
     linkedin: 'https://www.linkedin.com/',
     instagram: 'https://www.instagram.com/',
     twitter: 'https://www.twitter.com/',
@@ -29,9 +29,9 @@ const profileData = [
   },
   {
     id: 2,
-    name: 'John Doe',
-    position: 'CEO',
-    image: '/images/profilepi.svg',
+    name: 'Krishna Jha',
+    position: 'Product Manager',
+    image: '/Profile1.jpeg',
     linkedin: 'https://www.linkedin.com/',
     instagram: 'https://www.instagram.com/',
     twitter: 'https://www.twitter.com/',
@@ -39,9 +39,9 @@ const profileData = [
   },
   {
     id: 3,
-    name: 'John Doe',
-    position: 'CEO',
-    image: '/images/profilepi.svg',
+    name: 'Vishal Sagar',
+    position: 'Product Manager',
+    image: '/profile2.jpeg',
     linkedin: 'https://www.linkedin.com/',
     instagram: 'https://www.instagram.com/',
     twitter: 'https://www.twitter.com/',
@@ -49,24 +49,15 @@ const profileData = [
   },
   {
     id: 4,
-    name: 'John Doe',
-    position: 'CEO',
+    name: 'Sonu Kumar Jha',
+    position: 'Co-Founder',
     image: '/images/profilepi.svg',
     linkedin: 'https://www.linkedin.com/',
     instagram: 'https://www.instagram.com/',
     twitter: 'https://www.twitter.com/',
 
   },
-  {
-    id: 5,
-    name: 'John Doe',
-    position: 'CEO',
-    image: '/images/profilepi.svg',
-    linkedin: 'https://www.linkedin.com/',
-    instagram: 'https://www.instagram.com/',
-    twitter: 'https://www.twitter.com/',
-
-  }
+ 
 ]
 
 const ProfileCircle = () => {

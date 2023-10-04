@@ -1,11 +1,89 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
-import { MoveRight } from "lucide-react"
+import { Loader2, MoveRight } from "lucide-react"
 import { motion } from "framer-motion"
 import Image from 'next/image'
+import { Button } from "@/components/ui/button"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
+import { zodResolver } from "@hookform/resolvers/zod";
+import { set, useForm } from "react-hook-form";
+import * as z from "zod";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { toast } from '../ui/use-toast'
+import { sendMail } from '@/lib/mail'
 
-const HomeComponent = ({ animate }: any) => {
+
+const FormSchema = z.object({
+  name: z.string().min(5, {
+    message: "Name cannot be empty .",
+  }),
+  email: z.string().email({
+    message: "Please enter a valid email address.",
+
+  }),
+  message: z.string().min(10, {
+    message: "Message must be at least 10 characters.",
+  }),
+
+})
+
+
+const HomeComponent = () => {
+  const [isSending, setIsSending] = useState(false)
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    }
+  })
+
+  const onSubmit = async (values: z.infer<typeof FormSchema>) => {
+
+    try {
+      console.log(values)
+      setIsSending(true)
+
+      await sendMail(values.email, values.name, values.message)
+      toast(
+        {
+          title: "Success",
+          description: "Message sent successfully.",
+        }
+      )
+      setIsSending(false)
+
+      form.reset()
+    } catch (error: any) {
+      toast({
+        title: "Error",
+        description: error.message,
+
+      })
+      setIsSending(false)
+    }
+  }
 
   return (
     <section className="">
@@ -31,14 +109,82 @@ const HomeComponent = ({ animate }: any) => {
           >
             Welcome to Adity Management Services Pvt Ltd, your trusted source for all things fire-rated. With a strong commitment to safety and quality, we&apos;ve been aiming to be a leader in the industry since day one.
           </motion.p>
-          <motion.a
-            href="#"
-            className="inline-flex items-center justify-center px-5 py-3 mr-3 text-lg text-center text-white rounded-lg font-bold bg-[#666DD4]  focus:ring-4 focus:ring-primary-300 "
-            whileHover={{ scale: 1.05 }} // Animation on hover
-          >
-            Let&apos;s Connect✨
-            <MoveRight />
-          </motion.a>
+          <Dialog>
+            <DialogTrigger className="inline-flex items-center justify-center px-5 py-3 mr-3 text-lg text-center text-white rounded-lg font-bold bg-[#666DD4]  focus:ring-4 focus:ring-primary-300 ">  Let&apos;s Connect✨
+              <MoveRight /></DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle>Lets Connect</DialogTitle>
+                <DialogDescription>
+                  👋Send Your message Query to us!🚀
+                </DialogDescription>
+              </DialogHeader>
+              <Form {...form} >
+                <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-4 py-4">
+
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Name</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Enter Name" {...field} className='outline-none focus:outline-none bg-[#F5F4F9]' />
+                        </FormControl>
+
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Email</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Enter email" {...field} className='outline-none focus:outline-none bg-[#F5F4F9]' />
+                        </FormControl>
+
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Message</FormLabel>
+                        <FormControl>
+                          <Textarea placeholder="Enter Message" {...field} className='outline-none focus:outline-none bg-[#F5F4F9]' />
+                        </FormControl>
+
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <button type="submit" className="bg-[#666DD4] text-white font-semibold py-2 px-4  w-full rounded focus:outline-none focus:shadow-outline">{
+                    isSending ? <Loader2
+                      size={20}
+                      strokeWidth={2}
+                      className="animate-spin"
+                    /> : "Submit"
+
+                  }</button>
+                </form>
+              </Form>
+
+            </DialogContent>
+          </Dialog>
+
+
+
+
         </div>
         <motion.div
           className="lg:mt-0 lg:col-span-5 lg:flex mt-10"

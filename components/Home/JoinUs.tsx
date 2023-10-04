@@ -4,6 +4,7 @@ import React from 'react'
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
 import { fadeIn, slideIn, textVariant, zoomIn } from '@/lib/utils';
+import Link from 'next/link'
 
 const JoinUs = ({ animate }: any) => {
     return (
@@ -29,15 +30,14 @@ const JoinUs = ({ animate }: any) => {
             >
                 Join us in a journey where <span className='text-[#4B55EB]'>safety and style harmonize</span>, and your spaces bloom with elegance. At Adity Management Services Pvt Ltd,<span className='text-[#4B55EB]'>where your partners in protection and perfection, specializing in supplying, installing, and maintaining fire-rated doors</span>, glass, partitions, wooden doors, flush doors, hardware, and more. Your vision, our expertise – lets create perfection together.
             </motion.p>
-            <motion.div
-                initial={{ scale: 0.8 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+            <Link
+                href={"https://drive.google.com/drive/folders/1-k1Zvov6v2EFnibLVbG6bI4v77TxwUY1"}
+
             >
                 <Button variant={"brand"} size={"default"}>
                     Download Catalogue
                 </Button>
-            </motion.div>
+            </Link>
         </motion.div>
     )
 }

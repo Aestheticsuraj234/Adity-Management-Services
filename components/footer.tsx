@@ -57,7 +57,7 @@ function Footer() {
                         <Link  href={"/About/Our-Mission-Vision"} className="text-gray-500  text-md pb-2 font-semibold hover:text-[#4B55EB] cursor-pointer">
                         Our Mission & Vission
                         </Link>
-                        <Link href={"/"} className="text-gray-500  text-md pb-2 font-semibold hover:text-[#4B55EB] cursor-pointer">
+                        <Link href={"https://drive.google.com/drive/folders/1-k1Zvov6v2EFnibLVbG6bI4v77TxwUY1"} className="text-gray-500  text-md pb-2 font-semibold hover:text-[#4B55EB] cursor-pointer">
                         Downloads Catalogue 
                         </Link>
                       
@@ -66,11 +66,9 @@ function Footer() {
                 <div className="p-5">
                     <ul>
                         <p className="text-gray-800  font-bold text-2xl pb-4">Support</p>
-                        <Link href={"/contact-us"} className="text-gray-500  text-md pb-2 font-semibold hover:text-[#4B55EB] cursor-pointer">
+                        <Link href={"/ContactUs"} className="text-gray-500  text-md pb-2 font-semibold hover:text-[#4B55EB] cursor-pointer">
                             Contact-us
-                        </Link>
-                      
-                       
+                        </Link> 
                     </ul>
                 </div>
             </div>
