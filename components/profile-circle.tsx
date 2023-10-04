@@ -41,7 +41,7 @@ const profileData = [
     id: 3,
     name: 'Vishal Sagar',
     position: 'Product Manager',
-    image: '/profile2.jpeg',
+    image: '/Profile2.jpeg',
     linkedin: 'https://www.linkedin.com/',
     instagram: 'https://www.instagram.com/',
     twitter: 'https://www.twitter.com/',
