@@ -6,21 +6,20 @@ import { fadeIn, slideIn, textContainer, textVariant, textVariant2 } from '@/lib
 const imageGalleryData = [
   {
     imageUrl: '/Doors/door1.jpeg',
-    title: 'Shooting Stars',
-    subtitle: 'THE SUBTITLE 1',
-    description: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
+    title: 'FHC Doors',
+    subtitle: 'Non-Fire Rated Doors',
+   
   },
   {
     imageUrl: '/Doors/door2.jpeg',
-    title: 'The Catalyzer',
-    subtitle: 'THE SUBTITLE 2',
-    description: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
+    title: 'Emergency Fire Doors',
+    subtitle: 'Fire Rated Doors',
+    
   },
   {
     imageUrl: '/Doors/door3.jpeg',
-    title: 'The 400 Blows',
-    subtitle: 'THE SUBTITLE 3',
-    description: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
+    title: 'Emergency Fire Doors',
+    subtitle: 'Fire Rated Doors',
   },
   {
     imageUrl: '/Doors/door4.jpeg',
@@ -42,33 +41,30 @@ const imageGalleryData = [
   },
   {
     imageUrl: '/Doors/door7.jpeg',
-    title: 'Alper Kamu',
-    subtitle: 'THE SUBTITLE 6',
-    description: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
-  },
-  {
-    imageUrl: '/Doors/door7.jpeg',
-    title: 'Alper Kamu',
-    subtitle: 'THE SUBTITLE 6',
-    description: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
+    title: 'Emergency Fire Doors',
+    subtitle: 'Fire Rated Doors',
   },
   {
     imageUrl: '/Doors/door8.jpeg',
-    title: 'Alper Kamu',
-    subtitle: 'THE SUBTITLE 6',
-    description: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
+    title: 'Emergency Fire Doors',
+    subtitle: 'Fire Rated Doors',
   },
   {
     imageUrl: '/Doors/door9.jpeg',
-    title: 'Alper Kamu',
-    subtitle: 'THE SUBTITLE 6',
-    description: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
+    title: 'FHC Doors',
+    subtitle: 'Non-Fire Rated Doors',
+   
   },
   {
     imageUrl: '/Doors/door10.jpeg',
-    title: 'Alper Kamu',
-    subtitle: 'THE SUBTITLE 6',
-    description: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
+    title: 'GLAZED DOOR',
+    subtitle: 'Fire Door',
+   
+  },
+  {
+    imageUrl: '/Doors/door11.jpeg',
+    title: 'Emergency Fire Doors',
+    subtitle: 'Fire Rated Doors',
   },
 ];
 
