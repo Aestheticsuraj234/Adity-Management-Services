@@ -38,7 +38,7 @@ const ourservicesData = [
   },
   {
     id: 6,
-    title: "FIRE RATED CLEAR GLASS OF SAINT GOBIAN MAKE",
+    title: "FIRE RATED CLEAR GLASS OF SAINT GOBIAN MAKE / Schoot",
     description: "Saint Gobain's transparent fire-rated glass for added security.",
     image: "/images/glass-water.svg",
   },

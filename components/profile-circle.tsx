@@ -20,7 +20,7 @@ const profileData = [
   {
     id: 1,
     name: 'Abhinandan Jha',
-    position: 'Product Manager',
+    position: 'Project Manager',
     image: '/Profile3.jpeg',
     linkedin: 'https://www.linkedin.com/',
     instagram: 'https://www.instagram.com/',
@@ -30,7 +30,7 @@ const profileData = [
   {
     id: 2,
     name: 'Krishna Jha',
-    position: 'Product Manager',
+    position: 'Project Manager',
     image: '/Profile1.jpeg',
     linkedin: 'https://www.linkedin.com/',
     instagram: 'https://www.instagram.com/',
@@ -40,7 +40,7 @@ const profileData = [
   {
     id: 3,
     name: 'Vishal Sagar',
-    position: 'Product Manager',
+    position: 'Project Manager',
     image: '/Profile2.jpeg',
     linkedin: 'https://www.linkedin.com/',
     instagram: 'https://www.instagram.com/',
@@ -49,8 +49,8 @@ const profileData = [
   },
   {
     id: 4,
-    name: 'Sonu Kumar Jha',
-    position: 'Co-Founder',
+    name: 'Sonu Kumar',
+    position: 'Founder',
     image: '/images/profilepi.svg',
     linkedin: 'https://www.linkedin.com/',
     instagram: 'https://www.instagram.com/',
