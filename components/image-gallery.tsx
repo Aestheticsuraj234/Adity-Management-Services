@@ -61,11 +61,7 @@ const imageGalleryData = [
     subtitle: 'Fire Door',
    
   },
-  {
-    imageUrl: '/Doors/door11.jpeg',
-    title: 'Emergency Fire Doors',
-    subtitle: 'Fire Rated Doors',
-  },
+  
 ];
 
 const ImageGallery = () => {
